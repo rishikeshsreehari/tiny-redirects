@@ -1,4 +1,3 @@
-# admin/config.yml
 backend:
   name: github
   repo: rishikeshsreehari/tiny-redirects
@@ -17,7 +16,14 @@ collections:
     create: true
     extension: 'yaml'
     format: 'yaml'
+    identifier_field: short_url
     fields:
-      - {label: 'Short URL', name: 'short_url', widget: 'string', pattern: ['^/', 'Must start with /']}
-      - {label: 'Target URL', name: 'target_url', widget: 'string'}
-      - {label: 'Status Code', name: 'status_code', widget: 'select', options: [301, 302], default: 301}
+      - label: 'Redirects'
+        name: 'redirects'
+        widget: 'list'
+        fields:
+          - {label: 'Short URL', name: 'short_url', widget: 'string', pattern: ['^/', 'Must start with /']}
+          - {label: 'Target URL', name: 'target_url', widget: 'string'}
+          - {label: 'Status Code', name: 'status_code', widget: 'select', options: [301, 302], default: 301}
+    editor:
+      preview: false
