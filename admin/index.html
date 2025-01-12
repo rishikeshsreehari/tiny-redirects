@@ -1,4 +1,3 @@
-<!-- admin/index.html -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -8,6 +7,11 @@
   <body>
     <script src="https://unpkg.com/@staticcms/app@^3.0.0/dist/static-cms-app.js"></script>
     <script>
+      // Add event listener for the postMessage
+      window.addEventListener('message', function(event) {
+        console.log('Received message:', event);
+      });
+
       window.CMS.init({
         config: {
           backend: {
@@ -15,7 +19,14 @@
             repo: 'rishikeshsreehari/tiny-redirects',
             branch: 'main',
             base_url: 'https://r1l.in',
-            auth_endpoint: 'auth'
+            auth_endpoint: 'auth',
+            commit_messages: {
+              create: 'Create {{collection}} "{{slug}}"',
+              update: 'Update {{collection}} "{{slug}}"',
+              delete: 'Delete {{collection}} "{{slug}}"',
+              uploadMedia: 'Upload "{{path}}"',
+              deleteMedia: 'Delete "{{path}}"'
+            }
           },
           media_folder: "static/images",
           public_folder: "/images",
