@@ -1,3 +1,4 @@
+# admin/config.yml
 backend:
   name: github
   repo: rishikeshsreehari/tiny-redirects
@@ -11,17 +12,23 @@ public_folder: /images
 
 collections:
   - name: 'redirects'
-    label: 'Redirects'
+    label: 'Redirect Files'
     folder: 'redirects'
     create: true
     extension: 'yaml'
     format: 'yaml'
+    slug: '{{filename}}'
+    preview: false
     fields:
-      - name: redirects
-        label: Redirects
-        widget: list
-        allow_add: true
-        fields:
-          - {label: 'Short URL', name: 'short_url', widget: 'string', pattern: ['^/', 'Must start with /']}
-          - {label: 'Target URL', name: 'target_url', widget: 'string'}
-          - {label: 'Status Code', name: 'status_code', widget: 'select', options: [301, 302], default: 301}
+      - label: 'File Name'
+        name: 'filename'
+        widget: 'string'
+        pattern: ['^[a-zA-Z0-9-_]+$', 'Only letters, numbers, hyphens, and underscores allowed']
+        hint: 'Name of the YAML file (without .yaml extension)'
+      - label: 'Redirects'
+        name: 'body'
+        widget: 'code'
+        default_language: 'yaml'
+        allow_language_selection: false
+        output_code_only: true
+        hint: 'Edit redirects in YAML format'
