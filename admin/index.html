@@ -7,53 +7,66 @@
   <body>
     <script src="https://unpkg.com/@staticcms/app@^3.0.0/dist/static-cms-app.js"></script>
     <script>
-      // Add event listener before CMS init
-      window.addEventListener('message', function(event) {
-        console.log('Received message:', event);
+      // Function to initialize CMS
+      function initCMS(token) {
+        console.log('Initializing CMS with token:', token ? 'present' : 'not present');
         
-        // Parse the authorization message
+        window.CMS.init({
+          config: {
+            backend: {
+              name: 'github',
+              repo: 'rishikeshsreehari/tiny-redirects',
+              branch: 'main',
+              auth_type: 'oauth',
+              base_url: 'https://r1l.in',
+              auth_endpoint: 'auth',
+              client_id: 'Ov23li95H39G4vE8l2Il',
+              token: token
+            },
+            local_backend: false,
+            media_folder: "static/images",
+            public_folder: "/images",
+            collections: [
+              {
+                name: "redirects",
+                label: "URL Redirects",
+                folder: "redirects",
+                create: true,
+                extension: "yaml",
+                format: "yaml",
+                fields: [
+                  {label: "Short URL", name: "short_url", widget: "string", pattern: ['^/', "Must start with /"]},
+                  {label: "Target URL", name: "target_url", widget: "string"},
+                  {label: "Status Code", name: "status_code", widget: "select", options: [301, 302], default: 301}
+                ]
+              }
+            ]
+          }
+        });
+      }
+
+      // Handle OAuth callback
+      window.addEventListener('message', function(event) {
+        console.log('Received message event');
         if (event.data.toString().startsWith('authorization:github:success:')) {
+          console.log('Processing authorization success');
           const json = event.data.substring('authorization:github:success:'.length);
           const data = JSON.parse(json);
-          
-          // Store the token
           localStorage.setItem('githubToken', data.access_token);
-          
-          // Reload the page to reinitialize the CMS with the token
+          console.log('Token stored, reloading page');
           window.location.reload();
         }
       });
 
-      window.CMS.init({
-        config: {
-          backend: {
-            name: 'github',
-            repo: 'rishikeshsreehari/tiny-redirects',
-            branch: 'main',
-            base_url: 'https://r1l.in',
-            auth_endpoint: 'auth',
-            app_id: 'Ov23li95H39G4vE8l2Il', // Add your client ID here
-            token: localStorage.getItem('githubToken') // Use stored token if available
-          },
-          media_folder: "static/images",
-          public_folder: "/images",
-          collections: [
-            {
-              name: "redirects",
-              label: "URL Redirects",
-              folder: "redirects",
-              create: true,
-              extension: "yaml",
-              format: "yaml",
-              fields: [
-                {label: "Short URL", name: "short_url", widget: "string", pattern: ['^/', "Must start with /"]},
-                {label: "Target URL", name: "target_url", widget: "string"},
-                {label: "Status Code", name: "status_code", widget: "select", options: [301, 302], default: 301}
-              ]
-            }
-          ]
-        }
-      });
+      // Initialize CMS with token if available
+      const token = localStorage.getItem('githubToken');
+      if (token) {
+        console.log('Found existing token');
+        initCMS(token);
+      } else {
+        console.log('No token found, initializing without token');
+        initCMS(null);
+      }
     </script>
   </body>
 </html>
