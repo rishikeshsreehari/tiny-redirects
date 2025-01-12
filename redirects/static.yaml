@@ -1,0 +1,7 @@
+- short_url: "/"
+  target_url: "https://rishikeshs.com"
+  status_code: 301
+
+- short_url: "/d"
+  target_url: "https://rishii.cc/"
+  status_code: 301
