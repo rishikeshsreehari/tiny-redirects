@@ -1,0 +1,17 @@
+backend:
+  name: git-gateway
+  branch: main # Branch where changes will be committed
+
+media_folder: "uploads" # Media files directory
+public_folder: "/uploads" # Public path for uploaded media
+
+collections:
+  - name: "redirects"
+    label: "Redirects"
+    folder: "redirects" # Folder containing redirect YAML files
+    create: true
+    format: "yaml"
+    fields:
+      - { label: "Short URL", name: "short_url", widget: "string" }
+      - { label: "Target URL", name: "target_url", widget: "string" }
+      - { label: "Status Code", name: "status_code", widget: "select", options: [301, 302], default: 301 }
