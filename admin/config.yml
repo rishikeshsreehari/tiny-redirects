@@ -16,19 +16,15 @@ collections:
     folder: 'redirects'
     create: true
     extension: 'yaml'
-    format: 'yaml'
-    slug: '{{filename}}'
-    preview: false
+    identifier_field: 'short_url'
+    summary: '{{filename}}'
+    sortable_fields: ['filename']
     fields:
-      - label: 'File Name'
-        name: 'filename'
-        widget: 'string'
-        pattern: ['^[a-zA-Z0-9-_]+$', 'Only letters, numbers, hyphens, and underscores allowed']
-        hint: 'Name of the YAML file (without .yaml extension)'
       - label: 'Redirects'
         name: 'body'
-        widget: 'code'
-        default_language: 'yaml'
-        allow_language_selection: false
-        output_code_only: true
-        hint: 'Edit redirects in YAML format'
+        widget: 'list'
+        summary: '{{fields.short_url}} → {{fields.target_url}}'
+        fields:
+          - {label: 'Short URL', name: 'short_url', widget: 'string', pattern: ['^/', 'Must start with /']}
+          - {label: 'Target URL', name: 'target_url', widget: 'string'}
+          - {label: 'Status Code', name: 'status_code', widget: 'select', options: [301, 302], default: 301}
