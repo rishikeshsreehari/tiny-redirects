@@ -1,0 +1,23 @@
+# admin/config.yml
+backend:
+  name: github
+  repo: rishikeshsreehari/tiny-redirects
+  branch: main
+  site_domain: https://r1l.in
+  base_url: https://r1l.in
+  auth_endpoint: /api/auth
+
+media_folder: static/images
+public_folder: /images
+
+collections:
+  - name: 'redirects'
+    label: 'Redirects'
+    folder: 'redirects'
+    create: true
+    extension: 'yaml'
+    format: 'yaml'
+    fields:
+      - {label: 'Short URL', name: 'short_url', widget: 'string', pattern: ['^/', 'Must start with /']}
+      - {label: 'Target URL', name: 'target_url', widget: 'string'}
+      - {label: 'Status Code', name: 'status_code', widget: 'select', options: [301, 302], default: 301}

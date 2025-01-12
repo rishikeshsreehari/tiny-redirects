@@ -1,72 +1,12 @@
+<!-- admin/index.html -->
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>URL Shortener Admin</title>
   </head>
   <body>
-    <script src="https://unpkg.com/@staticcms/app@^3.0.0/dist/static-cms-app.js"></script>
-    <script>
-      // Function to initialize CMS
-      function initCMS(token) {
-        console.log('Initializing CMS with token:', token ? 'present' : 'not present');
-        
-        window.CMS.init({
-          config: {
-            backend: {
-              name: 'github',
-              repo: 'rishikeshsreehari/tiny-redirects',
-              branch: 'main',
-              auth_type: 'oauth',
-              base_url: 'https://r1l.in',
-              auth_endpoint: 'auth',
-              client_id: 'Ov23li95H39G4vE8l2Il',
-              token: token
-            },
-            local_backend: false,
-            media_folder: "static/images",
-            public_folder: "/images",
-            collections: [
-              {
-                name: "redirects",
-                label: "URL Redirects",
-                folder: "redirects",
-                create: true,
-                extension: "yaml",
-                format: "yaml",
-                fields: [
-                  {label: "Short URL", name: "short_url", widget: "string", pattern: ['^/', "Must start with /"]},
-                  {label: "Target URL", name: "target_url", widget: "string"},
-                  {label: "Status Code", name: "status_code", widget: "select", options: [301, 302], default: 301}
-                ]
-              }
-            ]
-          }
-        });
-      }
-
-      // Handle OAuth callback
-      window.addEventListener('message', function(event) {
-        console.log('Received message event');
-        if (event.data.toString().startsWith('authorization:github:success:')) {
-          console.log('Processing authorization success');
-          const json = event.data.substring('authorization:github:success:'.length);
-          const data = JSON.parse(json);
-          localStorage.setItem('githubToken', data.access_token);
-          console.log('Token stored, reloading page');
-          window.location.reload();
-        }
-      });
-
-      // Initialize CMS with token if available
-      const token = localStorage.getItem('githubToken');
-      if (token) {
-        console.log('Found existing token');
-        initCMS(token);
-      } else {
-        console.log('No token found, initializing without token');
-        initCMS(null);
-      }
-    </script>
+    <script src="https://unpkg.com/decap-cms@3.1.0-beta.5/dist/decap-cms.js"></script>
   </body>
 </html>
