@@ -8,7 +8,34 @@
   <body>
     <script src="https://unpkg.com/@staticcms/app@^3.0.0/dist/static-cms-app.js"></script>
     <script>
-      window.CMS.init();
+      // Add some logging to debug
+      console.log('Initializing CMS...');
+      window.CMS.init({
+        config: {
+          backend: {
+            name: 'github',
+            repo: 'your-username/your-repo',
+            branch: 'main',
+            base_url: 'https://r1l.in',
+            auth_endpoint: 'auth'
+          },
+          collections: [
+            {
+              name: 'redirects',
+              label: 'URL Redirects',
+              folder: 'redirects',
+              create: true,
+              extension: 'yaml',
+              format: 'yaml',
+              fields: [
+                {label: 'Short URL', name: 'short_url', widget: 'string', pattern: ['^/', 'Must start with /']},
+                {label: 'Target URL', name: 'target_url', widget: 'string'},
+                {label: 'Status Code', name: 'status_code', widget: 'select', options: [301, 302], default: 301}
+              ]
+            }
+          ]
+        }
+      });
     </script>
   </body>
 </html>
