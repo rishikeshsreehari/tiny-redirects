@@ -16,14 +16,12 @@ collections:
     create: true
     extension: 'yaml'
     format: 'yaml'
-    identifier_field: short_url
     fields:
-      - label: 'Redirects'
-        name: 'redirects'
-        widget: 'list'
+      - name: redirects
+        label: Redirects
+        widget: list
+        allow_add: true
         fields:
           - {label: 'Short URL', name: 'short_url', widget: 'string', pattern: ['^/', 'Must start with /']}
           - {label: 'Target URL', name: 'target_url', widget: 'string'}
           - {label: 'Status Code', name: 'status_code', widget: 'select', options: [301, 302], default: 301}
-    editor:
-      preview: false
