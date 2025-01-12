@@ -1,19 +1,18 @@
 backend:
   name: github
-  repo: rishikeshsreehari/tiny-redirects  # Your GitHub repo
-  branch: main  # Branch to commit changes
-  auth_scope: repo  # OAuth scope for full repo access
-
-media_folder: "uploads"  # Folder for uploaded media
-public_folder: "/uploads"  # Public path for media
+  repo: rishikeshsreehari/tiny-redirects
+  branch: main
+  base_url: https://r1l.in
+  auth_endpoint: auth
 
 collections:
   - name: "redirects"
-    label: "Redirects"
-    folder: "redirects"  # Folder containing your YAML files
+    label: "URL Redirects"
+    folder: "redirects"
     create: true
+    extension: "yaml"
     format: "yaml"
     fields:
-      - { label: "Short URL", name: "short_url", widget: "string" }
-      - { label: "Target URL", name: "target_url", widget: "string" }
-      - { label: "Status Code", name: "status_code", widget: "select", options: [301, 302], default: 301 }
+      - {label: "Short URL", name: "short_url", widget: "string", pattern: ['^/', "Must start with /"]}
+      - {label: "Target URL", name: "target_url", widget: "string"}
+      - {label: "Status Code", name: "status_code", widget: "select", options: [301, 302], default: 301}
