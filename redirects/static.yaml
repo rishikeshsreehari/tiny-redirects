@@ -5,3 +5,13 @@
 - short_url: "/d"
   target_url: "https://rishii.cc/"
   status_code: 301
+
+- short_url: "/to"
+  target_url: "https://rishii.cc/todo"
+  status_code: 301
+
+- short_url: "/n"
+  target_url: "https://rishii.cc/notes"
+  status_code: 301
+
+
