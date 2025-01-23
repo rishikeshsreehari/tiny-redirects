@@ -10,6 +10,10 @@
   target_url: "https://rishii.cc/todo"
   status_code: 301
 
+- short_url: "/2"
+  target_url: "https://rishii.cc/todo"
+  status_code: 301
+
 - short_url: "/n"
   target_url: "https://rishii.cc/notes"
   status_code: 301
