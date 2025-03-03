@@ -18,4 +18,7 @@
   target_url: "https://rishii.cc/notes"
   status_code: 301
 
+- short_url: "/cv"
+  target_url: "https://rishikeshs.com/docs/cv.pdf"
+  status_code: 301
 
