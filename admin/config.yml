@@ -14,11 +14,17 @@ collections:
     summary: '{{filename}}'
     fields:
       - label: 'Redirects'
-        name: 'body'
-        widget: 'code'
-        default_language: 'yaml'
-        hint: 'Paste raw redirect list here.'
-        default: |
-          - short_url: "/example"
-            target_url: "https://example.com"
-            status_code: 301
+        name: 'redirects'
+        widget: 'list'
+        label_singular: 'Redirect'
+        fields:
+          - label: 'Short URL'
+            name: 'short_url'
+            widget: 'string'
+          - label: 'Target URL'
+            name: 'target_url'
+            widget: 'string'
+          - label: 'Status Code'
+            name: 'status_code'
+            widget: 'number'
+            default: 301
