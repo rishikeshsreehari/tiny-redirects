@@ -10,6 +10,7 @@ OUTPUT_FILE = "./_redirects"
 def read_redirects(folder_path):
     """
     Read all YAML files in the folder and collect redirects.
+    Supports both plain list and dict with 'redirects' key.
     """
     redirects = []
     redirect_file_count = 0
@@ -22,7 +23,17 @@ def read_redirects(folder_path):
                 if data is None:
                     print(f"Warning: {file_path} is empty or invalid, skipping.")
                     continue
-                for entry in data:
+
+                # Support both list of redirects or dict with key 'redirects'
+                if isinstance(data, dict) and "redirects" in data:
+                    entries = data["redirects"]
+                elif isinstance(data, list):
+                    entries = data
+                else:
+                    print(f"Warning: Unrecognized format in {file_path}, skipping.")
+                    continue
+
+                for entry in entries:
                     short_url = entry.get("short_url")
                     target_url = entry.get("target_url")
                     status_code = entry.get("status_code", 301)  # Default to 301
@@ -31,10 +42,9 @@ def read_redirects(folder_path):
                         file_redirects += 1
             except yaml.YAMLError as e:
                 print(f"Error parsing {file_path}: {e}")
-        
-        # Display how many redirects were processed from the file
+
         print(f"Found {file_redirects} redirects in {os.path.basename(file_path)}")
-    
+
     print(f"Total {redirect_file_count} redirect files found.")
     return redirects
 
@@ -49,20 +59,16 @@ def validate_redirects(redirects):
     url_pattern = re.compile(r'^(http|https)://[a-zA-Z0-9.-]+(:[0-9]+)?(/.*)?$')
 
     for short_url, target_url, status_code in redirects:
-        # Check for duplicate short_url
         if short_url in seen:
             raise ValueError(f"Duplicate short URL detected: {short_url}")
         seen.add(short_url)
 
-        # Validate short_url format
         if not short_url.startswith("/"):
             raise ValueError(f"Invalid short URL (must start with '/'): {short_url}")
 
-        # Validate target_url format
         if not url_pattern.match(target_url):
             raise ValueError(f"Invalid target URL format: {target_url}")
 
-        # Validate status_code
         if status_code not in [301, 302]:
             raise ValueError(f"Invalid status code (must be 301 or 302): {status_code}")
 
@@ -77,16 +83,10 @@ def write_redirects(redirects, output_file):
 
 if __name__ == "__main__":
     try:
-        # Step 1: Read all redirects
         redirects = read_redirects(REDIRECTS_FOLDER)
-
-        # Step 2: Validate the redirects
         validate_redirects(redirects)
         print("Validation passed. No issues detected.")
-
-        # Step 3: Write the combined and validated redirects to the output file
         write_redirects(redirects, OUTPUT_FILE)
-
     except ValueError as e:
         print(f"Error: {e}")
         exit(1)
