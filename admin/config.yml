@@ -3,6 +3,12 @@ backend:
   repo: rishikeshsreehari/tiny-redirects
   branch: main
 
+media_folder: "static/uploads"
+public_folder: "/uploads"
+
+media_library:
+  name: uploadcare
+
 collections:
   - name: 'redirects'
     label: 'Redirect Files'
