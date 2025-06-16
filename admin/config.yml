@@ -1,4 +1,3 @@
-# admin/config.yml
 backend:
   name: github
   repo: rishikeshsreehari/tiny-redirects
@@ -14,14 +13,11 @@ collections:
     slug: '{{slug}}'
     summary: '{{filename}}'
     fields:
-      - label: 'File Name'
-        name: 'title'
-        widget: 'string'
-        hint: 'Name for this redirect file'
-      - label: 'Redirects (YAML)'
+      - label: 'Redirects'
         name: 'body'
         widget: 'code'
         default_language: 'yaml'
+        hint: 'Paste raw redirect list here.'
         default: |
           - short_url: "/example"
             target_url: "https://example.com"
