@@ -7,6 +7,10 @@
 - All `.yaml` files inside the `redirects/` folder are processed.
 - The `build.py` script reads, validates, and converts them into a single `_redirects` file.
 - This `_redirects` file can be served directly by Netlify to handle static redirects.
+- If deployed on Netlify, urls can be added via Decap CMS
+
+![image](https://github.com/user-attachments/assets/807825b3-a843-4bbf-ac7e-7d9907ec08c5)
+
 
 ## Folder Structure
 
