@@ -3,12 +3,6 @@ backend:
   name: github
   repo: rishikeshsreehari/tiny-redirects
   branch: main
-  site_domain: https://r1l.in
-  base_url: https://r1l.in
-  auth_endpoint: /api/auth
-
-media_folder: static/images
-public_folder: /images
 
 collections:
   - name: 'redirects'
@@ -19,7 +13,6 @@ collections:
     format: 'yaml'
     slug: '{{slug}}'
     summary: '{{filename}}'
-    sortable_fields: ['filename']
     fields:
       - label: 'File Name'
         name: 'title'
