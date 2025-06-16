@@ -16,15 +16,20 @@ collections:
     folder: 'redirects'
     create: true
     extension: 'yaml'
-    identifier_field: 'short_url'
+    format: 'yaml'
+    slug: '{{slug}}'
     summary: '{{filename}}'
     sortable_fields: ['filename']
     fields:
-      - label: 'Redirects'
+      - label: 'File Name'
+        name: 'title'
+        widget: 'string'
+        hint: 'Name for this redirect file'
+      - label: 'Redirects (YAML)'
         name: 'body'
-        widget: 'list'
-        summary: '{{fields.short_url}} → {{fields.target_url}}'
-        fields:
-          - {label: 'Short URL', name: 'short_url', widget: 'string', pattern: ['^/', 'Must start with /']}
-          - {label: 'Target URL', name: 'target_url', widget: 'string'}
-          - {label: 'Status Code', name: 'status_code', widget: 'select', options: [301, 302], default: 301}
+        widget: 'code'
+        default_language: 'yaml'
+        default: |
+          - short_url: "/example"
+            target_url: "https://example.com"
+            status_code: 301
