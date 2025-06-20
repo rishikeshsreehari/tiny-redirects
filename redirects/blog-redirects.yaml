@@ -304,7 +304,7 @@
 - short_url: /d82327
   target_url: https://rishikeshs.com/advertise/
   status_code: 301
-- short_url: /678bb1
+- short_url: /ama
   target_url: https://rishikeshs.com/ama/
   status_code: 301
 - short_url: /8e68cb
@@ -316,7 +316,7 @@
 - short_url: /a35e21
   target_url: https://rishikeshs.com/book-notes/
   status_code: 301
-- short_url: /1cf385
+- short_url: /button
   target_url: https://rishikeshs.com/button/
   status_code: 301
 - short_url: /5319fe
@@ -361,7 +361,7 @@
 - short_url: /9687ca
   target_url: https://rishikeshs.com/newsletter/
   status_code: 301
-- short_url: /8894c1
+- short_url: /now
   target_url: https://rishikeshs.com/now/
   status_code: 301
 - short_url: /6b797c
@@ -385,7 +385,7 @@
 - short_url: /9b3d25
   target_url: https://rishikeshs.com/timeline/
   status_code: 301
-- short_url: /405cc6
+- short_url: /unoffice
   target_url: https://rishikeshs.com/unoffice-hours/
   status_code: 301
 - short_url: /watch
