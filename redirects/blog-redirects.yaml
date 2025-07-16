@@ -196,6 +196,9 @@
 - short_url: /3717e4
   target_url: https://rishikeshs.com/meet/2/
   status_code: 301
+- short_url: /6f8ed6
+  target_url: https://rishikeshs.com/meet/3/
+  status_code: 301
 - short_url: /cbd877
   target_url: https://rishikeshs.com/now-2024-06-09/
   status_code: 301
