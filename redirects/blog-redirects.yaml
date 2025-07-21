@@ -403,6 +403,9 @@
 - short_url: /157e8c
   target_url: https://rishikeshs.com/til/bike-pedal-reverse/
   status_code: 301
+- short_url: /1af438
+  target_url: https://rishikeshs.com/til/google-drive-wsl/
+  status_code: 301
 - short_url: /136be9
   target_url: https://rishikeshs.com/til/hugo-remote-data/
   status_code: 301
