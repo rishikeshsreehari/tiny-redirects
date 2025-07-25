@@ -23,7 +23,7 @@ redirects:
   - status_code: 301
     target_url: https://github.com/rishikeshsreehari/tiny-redirects/
     short_url: /git
--   status_code: 301
+  - status_code: 301
     target_url: https://newsletter.rishikeshs.com
     short_url: /nl
 
