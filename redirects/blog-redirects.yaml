@@ -103,6 +103,9 @@
 - short_url: /f99493
   target_url: https://rishikeshs.com/resonance-journal/
   status_code: 301
+- short_url: /3f2f03
+  target_url: https://rishikeshs.com/robot-vacuums/
+  status_code: 301
 - short_url: /9ea219
   target_url: https://rishikeshs.com/show-your-work-by-austin-kleon-book-summary-notes/
   status_code: 301
@@ -417,6 +420,9 @@
   status_code: 301
 - short_url: /136be9
   target_url: https://rishikeshs.com/til/hugo-remote-data/
+  status_code: 301
+- short_url: /5b11ec
+  target_url: https://rishikeshs.com/til/hugo-syntax-highlighting/
   status_code: 301
 - short_url: /b59ca1
   target_url: https://rishikeshs.com/til/palm-leaf-writing/
