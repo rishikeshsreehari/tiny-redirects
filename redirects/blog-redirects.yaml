@@ -79,6 +79,9 @@
 - short_url: /d47f98
   target_url: https://rishikeshs.com/ikea-effect/
   status_code: 301
+- short_url: /jor25
+  target_url: https://rishikeshs.com/jordan-2025/
+  status_code: 301
 - short_url: /071035
   target_url: https://rishikeshs.com/lessons-30-day-meditation-challenge/
   status_code: 301
