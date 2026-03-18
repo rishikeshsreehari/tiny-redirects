@@ -385,7 +385,7 @@
 - short_url: /6b797c
   target_url: https://rishikeshs.com/privacy-policy/
   status_code: 301
-- short_url: /9e9d2d
+- short_url: /projects
   target_url: https://rishikeshs.com/projects/
   status_code: 301
 - short_url: /puzzle
@@ -396,9 +396,6 @@
   status_code: 301
 - short_url: /s
   target_url: https://rishikeshs.com/support/
-  status_code: 301
-- short_url: /fc15b6
-  target_url: https://rishikeshs.com/test-embeds/
   status_code: 301
 - short_url: /f21e57
   target_url: https://rishikeshs.com/then/
