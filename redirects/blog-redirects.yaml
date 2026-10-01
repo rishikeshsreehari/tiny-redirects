@@ -121,6 +121,9 @@
 - short_url: /4fe968
   target_url: https://rishikeshs.com/the-hobby-i-forgot/
   status_code: 301
+- short_url: /70d305
+  target_url: https://rishikeshs.com/verbose/
+  status_code: 301
 - short_url: /9e52b5
   target_url: https://rishikeshs.com/zone-2-training/
   status_code: 301
@@ -409,9 +412,6 @@
 - short_url: /unoffice
   target_url: https://rishikeshs.com/unoffice-hours/
   status_code: 301
-- short_url: /watch
-  target_url: https://rishikeshs.com/watch/
-  status_code: 301
 - short_url: /webr
   target_url: https://rishikeshs.com/webrings/
   status_code: 301
@@ -438,6 +438,9 @@
   status_code: 301
 - short_url: /9c0a0b
   target_url: https://rishikeshs.com/til/reversible-pump-head/
+  status_code: 301
+- short_url: /watch
+  target_url: https://rishikeshs.com/watch/
   status_code: 301
 - short_url: /cf34c6
   target_url: https://rishikeshs.com/watch/IC814/
