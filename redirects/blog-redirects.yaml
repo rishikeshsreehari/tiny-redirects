@@ -319,6 +319,9 @@
 - short_url: /b8640f
   target_url: https://rishikeshs.com/now-2026-03-18/
   status_code: 301
+- short_url: /39e853
+  target_url: https://rishikeshs.com/now-2026-10-02/
+  status_code: 301
 - short_url: /6d6b07
   target_url: https://rishikeshs.com/now-archive/
   status_code: 301
@@ -418,8 +421,17 @@
 - short_url: /3fc688
   target_url: https://rishikeshs.com/til/
   status_code: 301
+- short_url: /779501
+  target_url: https://rishikeshs.com/til/azure-captcha-pihole/
+  status_code: 301
 - short_url: /157e8c
   target_url: https://rishikeshs.com/til/bike-pedal-reverse/
+  status_code: 301
+- short_url: /86820a
+  target_url: https://rishikeshs.com/til/biryani-not-biriyani/
+  status_code: 301
+- short_url: /169a84
+  target_url: https://rishikeshs.com/til/chiller-free-uae/
   status_code: 301
 - short_url: /376544
   target_url: https://rishikeshs.com/til/dead-key-fob-start/
@@ -439,14 +451,26 @@
 - short_url: /5b11ec
   target_url: https://rishikeshs.com/til/hugo-syntax-highlighting/
   status_code: 301
+- short_url: /7d4c3a
+  target_url: https://rishikeshs.com/til/mac-screenshot-save-location/
+  status_code: 301
+- short_url: /794e07
+  target_url: https://rishikeshs.com/til/mac-screenshot-to-clipboard/
+  status_code: 301
 - short_url: /b59ca1
   target_url: https://rishikeshs.com/til/palm-leaf-writing/
   status_code: 301
 - short_url: /a1462d
   target_url: https://rishikeshs.com/til/reddit-rss-feed/
   status_code: 301
+- short_url: /ef6c58
+  target_url: https://rishikeshs.com/til/restful-api-no-verbs/
+  status_code: 301
 - short_url: /9c0a0b
   target_url: https://rishikeshs.com/til/reversible-pump-head/
+  status_code: 301
+- short_url: /706946
+  target_url: https://rishikeshs.com/til/vscode-default-settings-read-only/
   status_code: 301
 - short_url: /watch
   target_url: https://rishikeshs.com/watch/
