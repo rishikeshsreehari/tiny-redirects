@@ -421,6 +421,15 @@
 - short_url: /157e8c
   target_url: https://rishikeshs.com/til/bike-pedal-reverse/
   status_code: 301
+- short_url: /376544
+  target_url: https://rishikeshs.com/til/dead-key-fob-start/
+  status_code: 301
+- short_url: /3aaef8
+  target_url: https://rishikeshs.com/til/esp32-in-out-solder-bridge/
+  status_code: 301
+- short_url: /cdeb95
+  target_url: https://rishikeshs.com/til/fossils-not-bones/
+  status_code: 301
 - short_url: /1af438
   target_url: https://rishikeshs.com/til/google-drive-wsl/
   status_code: 301
