@@ -355,7 +355,7 @@
 - short_url: /648445
   target_url: https://rishikeshs.com/credits/
   status_code: 301
-- short_url: /43bccf
+- short_url: /dream
   target_url: https://rishikeshs.com/dream/
   status_code: 301
 - short_url: /aceb15
@@ -367,7 +367,7 @@
 - short_url: /hire
   target_url: https://rishikeshs.com/hire/
   status_code: 301
-- short_url: /de0a44
+- short_url: /ideas
   target_url: https://rishikeshs.com/ideas/
   status_code: 301
 - short_url: /read
@@ -379,7 +379,7 @@
 - short_url: /log
   target_url: https://rishikeshs.com/log/
   status_code: 301
-- short_url: /777174
+- short_url: /mosaic
   target_url: https://rishikeshs.com/mosaic/
   status_code: 301
 - short_url: /889cb7
@@ -399,6 +399,9 @@
   status_code: 301
 - short_url: /puzzle
   target_url: https://rishikeshs.com/puzzle/
+  status_code: 301
+- short_url: /refer
+  target_url: https://rishikeshs.com/referrals/
   status_code: 301
 - short_url: /a73f25
   target_url: https://rishikeshs.com/search/
