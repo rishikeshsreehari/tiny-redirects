@@ -457,6 +457,9 @@
 - short_url: /52927f
   target_url: https://rishikeshs.com/stories/20261028-022919/
   status_code: 301
+- short_url: /8f2d86
+  target_url: https://rishikeshs.com/stories/20261028-194635/
+  status_code: 301
 - short_url: /3fc688
   target_url: https://rishikeshs.com/til/
   status_code: 301
