@@ -367,6 +367,9 @@
 - short_url: /button
   target_url: https://rishikeshs.com/button/
   status_code: 301
+- short_url: /coffee
+  target_url: https://rishikeshs.com/coffee/
+  status_code: 301
 - short_url: /5319fe
   target_url: https://rishikeshs.com/colophon/
   status_code: 301
