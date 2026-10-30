@@ -232,6 +232,9 @@
 - short_url: /432d20
   target_url: https://rishikeshs.com/micro/20261030-000028/
   status_code: 301
+- short_url: /5fe6d4
+  target_url: https://rishikeshs.com/micro/20261030-023002/
+  status_code: 301
 - short_url: /cbd877
   target_url: https://rishikeshs.com/now-2024-06-09/
   status_code: 301
