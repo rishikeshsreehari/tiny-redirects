@@ -238,6 +238,12 @@
 - short_url: /80ccde
   target_url: https://rishikeshs.com/micro/20261101-111845/
   status_code: 301
+- short_url: /dbf51f
+  target_url: https://rishikeshs.com/micro/20261102-200406/
+  status_code: 301
+- short_url: /eb81a0
+  target_url: https://rishikeshs.com/micro/20261102-210608/
+  status_code: 301
 - short_url: /cbd877
   target_url: https://rishikeshs.com/now-2024-06-09/
   status_code: 301
@@ -474,6 +480,9 @@
   status_code: 301
 - short_url: /351e38
   target_url: https://rishikeshs.com/stories/20261029-184313/
+  status_code: 301
+- short_url: /101527
+  target_url: https://rishikeshs.com/stories/20261102-205920/
   status_code: 301
 - short_url: /3fc688
   target_url: https://rishikeshs.com/til/
